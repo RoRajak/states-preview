@@ -1,0 +1,174 @@
+@import url(https://fonts.google.com/specimen/Inter);
+@import url(https://fonts.google.com/specimen/Lexend+Deca);
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.main-content{
+    display: flex;
+    width: 1000px;
+    height: 420px;
+    border-radius: 8px;
+    background-color: hsl(244, 38%, 16%);
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    width: 51%;
+    height: 60px;
+    padding: 60px;
+    padding-right: 95px;
+}
+
+.left-content h1 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 33px;
+}
+
+.left-content h1 span {
+    color: hsl(277, 64%, 61%);
+}
+
+.left-content p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 39px;
+    font-size: 13px;
+    line-height: 1.6;
+    padding-right: 51px;
+}
+
+.stats-desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 310px;
+    margin-top: 90px;
+}
+
+.stats{
+    width: 50px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+    line-height: 1.5;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats span {
+    color: white;
+    text-transform: none;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'inter',sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.right-content {
+    display: flex;
+    background-image: url('images/image-header-desktop.jpg');
+    width: 50%;
+    height: 420px;
+    background-size: cover;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277,46%,45%);
+    opacity: 0.5;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+@media (max-width:1000px) {
+    .main-content{
+        height: auto;
+    }
+    .left-content{
+        height: auto;
+    }
+    .right-content{
+        height: auto;
+    }
+    
+    
+}
+
+@media(max-width:800px){
+    main{
+        height: auto;
+    }
+    .main-content{
+        flex-wrap: wrap-reverse;
+        margin: 20px;
+        width: 100%;
+    }
+    .left-content{
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        padding-right: 0;
+        margin: 30px;
+
+    }
+    .left-content p{
+        font-size: 17px;
+        padding-left: 18px;
+    }
+
+    .right-content{
+        width: 100%;
+        height: 320px;
+        background-image: url('images/image-header-mobile.jpg');
+        background-size: cover;
+        border-top-left-radius:8px ;
+        border-bottom-right-radius:0 ;
+    }
+
+    .image{
+        border-top-left-radius:8px ;
+    }
+
+    .stats-desc{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .stats{
+        align-items: center;
+        margin-bottom: 30px;
+        font-size: 17px;
+    }
+
+    .stats span{
+        align-items: center;
+        font-size: 33px;
+    }
+}
